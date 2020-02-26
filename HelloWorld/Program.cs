@@ -7,7 +7,32 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Howdy Y'all!!");
+
+            Console.WriteLine("Select a dialect...");
+
+            foreach (var arg in args)
+            {
+                Console.WriteLine(arg);
+            }
+
+            string dialect = Console.ReadLine().ToLower();
+
+            switch (dialect)
+            {
+                case "southern":
+                    Console.WriteLine("Howdy, Y'all!");
+                    break;
+                case "northern":
+                    Console.WriteLine("Hey you guys!");
+                    break;
+                case "turtle":
+                    Console.WriteLine("Kowabunga Dude!");
+                    break;
+                default:
+                    Console.WriteLine("Howdy, Y'all!");
+                    break;
+
+            }
 
             var animals = new string[] { "Triceratops", "Cat", "Gorilla", "Corgi", "Toucan", "Dog" };
             var vowels = new char[]{ 'a', 'e', 'i', 'o', 'u', 'y' };
